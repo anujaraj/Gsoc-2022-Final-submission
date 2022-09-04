@@ -2,16 +2,16 @@
 
 ## Introduction
 The Google Summer of Code program has been a great and fun learning experience for me over the past months. The project aimed at improving the accessibility of wagtail in the lens of high contrast themes in windows. The project had two major parts</br>
-Resolving existing high contrast issues mainly in the Wagtail admin:</br>
+*Resolving existing high contrast issues mainly in the Wagtail admin:*</br>
 Most of the contrast and accessibility issues were present in Wagtail’s styleguide. The issues had to be dealt in all themes of the windows contrast themes to improve accessibility of the Admin for all its users</br>
  
-Accessibility tests and reporting new issues :</br>
+*Accessibility tests and reporting new issues :*</br>
 We can divide the tests into two categories- Automated and manual. The manual accessibility tests were mostly performed using Chrome tools and Windows 11 contrast themes.</br>
 The Automated testing was performed using pa11y. 
 
-## What is Wagtail
+#### What is Wagtail
 Wagtail is a free and open source content management system (CMS) written in Python. It is popular amongst websites using the Django framework.</br>
-What is Windows High Contrast and why is it needed</br>
+#### What is Windows High Contrast and why is it needed</br>
 Windows High Contrast mode ensures a customized user interface that renders data according to the requirement of the user. Though to some users working without WHCM is a better option, many face visual disabilities and as a result, find the UI difficult to navigate. Therefore to allow all users a satisfactory admin interface we must ensure WHCM is implemented throughout the admin.
 
 ## Work Summary
@@ -46,16 +46,16 @@ https://github.com/wagtail/bakerydemo/issues/356<br></br>
 ## Pull Requests
  
 ### Merged pull requests before GSoC period
-https://github.com/wagtail/wagtail/pull/8238
+*https://github.com/wagtail/wagtail/pull/8238*
 ### Merged Pull requests during GSoc period
-https://github.com/wagtail/wagtail/pull/8909 </br>
+*https://github.com/wagtail/wagtail/pull/8909 </br>
 https://github.com/wagtail/wagtail/pull/8719 </br>
 https://github.com/wagtail/wagtail/pull/8718 </br>
 https://github.com/wagtail/wagtail/pull/8852 </br>
 https://github.com/wagtail/wagtail/pull/8853 </br>
 https://github.com/wagtail/wagtail/pull/8874 </br>
 https://github.com/wagtail/wagtail/pull/8897 </br>
-https://github.com/wagtail/wagtail/pull/8729 </br>
+https://github.com/wagtail/wagtail/pull/8729* </br>
 
 ## Important Links
 [Documentation](https://docs.wagtail.org/en/stable/) </br>
