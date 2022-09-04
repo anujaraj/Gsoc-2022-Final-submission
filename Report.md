@@ -17,15 +17,22 @@ Windows High Contrast mode ensures a customized user interface that renders data
 # Work Summary
  
 ## Fixed prior issues mentioned in the  Audits in the UI components, Admin interface, and Wagtail Style Guide which are described below:
-Issue #1: High-contrast mode: buttons with .disabled class look active in high-contrast mode - To resolve this issue I added a PR that added a @media query in forced-colors for the disabled buttons with certain CSS styles to enable better disabled look<br></br>
-Issue #2: Progress Bar not visible in Windows High Contrast Mode - To resolve this issue system colors were added to the components <br></br>
+##### Issue #1: 
+High-contrast mode: buttons with .disabled class look active in high-contrast mode - To resolve this issue I added a PR that added a @media query in forced-colors for the disabled buttons with certain CSS styles to enable better disabled look<br></br>
+##### Issue #2: 
+Progress Bar not visible in Windows High Contrast Mode - To resolve this issue system colors were added to the components <br></br>
  
 ## Fixing issues discovered during the GSOC coding period are mentioned below:
-Issue #3: Check Mark is not visible inside the checkbox in the users section of the Admin in Windows High Contrast Mode - To resolve the issue I used media query and forced color : active along with system colors<br></br>
-Issue #4: The icons in the Styleguide, in contrast themes were overridden by forced colors which removed the icon’s original meaning - To achieve the desired result I commented the media query for forced-colors over the icons. The query was added when chrome was having a bug due to which an override on icons using fill (a css property) was required. Since the bug is removed we would want to remove the override too<br></br>
-Issue #5: The boxes(help,critical message and warning boxes) inside the Styleguide were styled oddly giving visual traffic to eyes in Windows High Contrast Mode  - To resolve this issue I added three types of borders to the three kinds of boxes and removed any color from texts or borders. This provides a distinct look as well as more visual clarity to the viewer in Windows High Contrast Mode.Along with border styling the issue pertaining to text inside the first box (help box) in lighter modes of high contrast earlier was not visible<br></br>
-Issue #6: In Windows High Contrast Mode / forced-colors mode, Styleguide’s  dialog component lacks a backdrop, thus making it hard to understand where the component is - To resolve this borders were added to the modal box using forced colors and system colors<br></br>
-Issue #7: In Windows High Contrast Mode/ forced colors mode,tooltip-style "More" dropdowns are missing a border or outline, so it’s hard to tell where the dropdown is - To resolve this I added a transparent border to the component making it visible only in the contrast themes<br></br>
+##### Issue #3: 
+Check Mark is not visible inside the checkbox in the users section of the Admin in Windows High Contrast Mode - To resolve the issue I used media query and forced color : active along with system colors<br></br>
+##### Issue #4: 
+The icons in the Styleguide, in contrast themes were overridden by forced colors which removed the icon’s original meaning - To achieve the desired result I commented the media query for forced-colors over the icons. The query was added when chrome was having a bug due to which an override on icons using fill (a css property) was required. Since the bug is removed we would want to remove the override too<br></br>
+##### Issue #5: 
+The boxes(help,critical message and warning boxes) inside the Styleguide were styled oddly giving visual traffic to eyes in Windows High Contrast Mode  - To resolve this issue I added three types of borders to the three kinds of boxes and removed any color from texts or borders. This provides a distinct look as well as more visual clarity to the viewer in Windows High Contrast Mode.Along with border styling the issue pertaining to text inside the first box (help box) in lighter modes of high contrast earlier was not visible<br></br>
+##### Issue #6: 
+In Windows High Contrast Mode / forced-colors mode, Styleguide’s  dialog component lacks a backdrop, thus making it hard to understand where the component is - To resolve this borders were added to the modal box using forced colors and system colors<br></br>
+##### Issue #7: 
+In Windows High Contrast Mode/ forced colors mode,tooltip-style "More" dropdowns are missing a border or outline, so it’s hard to tell where the dropdown is - To resolve this I added a transparent border to the component making it visible only in the contrast themes<br></br>
 ## Fixed Linting issues - Linting the changes while making changes on the frontend is important to reflect changes on the browser. 
 Issue #8: While running npm run lint:format in windows, a certain error popped up due to some incorrect format of how it was written as a script inside the packages. This was corrected by changing the format of how it was written particularly for Windows users.<br></br>
 ## Accessibility Testing 
@@ -41,14 +48,14 @@ https://github.com/wagtail/bakerydemo/issues/356<br></br>
 ### Merged pull requests before GSoC period
 https://github.com/wagtail/wagtail/pull/8238
 ### Merged Pull requests during GSoc period
-https://github.com/wagtail/wagtail/pull/8909 <br></br>
-https://github.com/wagtail/wagtail/pull/8719 <br></br>
-https://github.com/wagtail/wagtail/pull/8718 <br></br>
-https://github.com/wagtail/wagtail/pull/8852 <br></br>
-https://github.com/wagtail/wagtail/pull/8853 <br></br>
-https://github.com/wagtail/wagtail/pull/8874 <br></br>
-https://github.com/wagtail/wagtail/pull/8897 <br></br>
-https://github.com/wagtail/wagtail/pull/8729 <br></br>
+https://github.com/wagtail/wagtail/pull/8909 </br>
+https://github.com/wagtail/wagtail/pull/8719 </br>
+https://github.com/wagtail/wagtail/pull/8718 </br>
+https://github.com/wagtail/wagtail/pull/8852 </br>
+https://github.com/wagtail/wagtail/pull/8853 </br>
+https://github.com/wagtail/wagtail/pull/8874 </br>
+https://github.com/wagtail/wagtail/pull/8897 </br>
+https://github.com/wagtail/wagtail/pull/8729 </br>
 
 ## Important Links
 Documentation <br></br>
@@ -60,9 +67,9 @@ Contrast Themes and Testing
  
 ## Future Aspects
  
-I intend to improve this project and also it can act as the starting point for anyone who would be interested in contributing to the project further. A few of the improvements and new features could be the following:
-Performing Automated pa11y testing over the Wagtail’s Bakery Demo Admin interface
-Extending the contrast improvements to Wagtail’s Bakery Demo site
+I intend to improve this project and also it can act as the starting point for anyone who would be interested in contributing to the project further. A few of the improvements and new features could be the following:</br>
+Performing Automated pa11y testing over the Wagtail’s Bakery Demo Admin interface</br>
+Extending the contrast improvements to Wagtail’s Bakery Demo site</br>
 
 ## Remarks
  
