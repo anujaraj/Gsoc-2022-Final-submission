@@ -40,8 +40,9 @@ Issue #8: While running npm run lint:format in windows, a certain error popped u
 ### Accessibility Testing 
 The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project we conducted manual testing using Windows Contrast themes and Chrome tools</br>
 Working with Pa11y - For trying automated testing we preferred pa11y. Since most automated tests were already performed by my mentor Thibaud in his github repository, (https://github.com/thibaudcolas/wagtail-tooling/blob/main/accessibility/pa11y-test.js)I mostly worked with wagtail’s Bakery Demo website for testing pa11y. I conducted automated testing on its few pages and found bugs as shown in the below screenshots:</br>
-https://user-images.githubusercontent.com/52713215/188315706-7fae9421-7a6d-4328-9467-be097ec38529.png
+![Screenshot-1](https://user-images.githubusercontent.com/52713215/188315836-d1d189b2-c6f7-4d2a-89ee-3506c62aab10.png)
 
+![Screenshot (193)](https://user-images.githubusercontent.com/52713215/188315844-89b75032-1d75-45a8-962e-1b55cb7d76af.png)
 
 The above issues were reported in the issues of wagtail’s bakery demo repository under the following link : </br>
 https://github.com/wagtail/bakerydemo/issues/356<br></br>
