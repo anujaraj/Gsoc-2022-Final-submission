@@ -1,6 +1,6 @@
 # Gsoc-2022-Final-submission
-GSoC '22 Report | Anuja Raj Verma | Wagtail | High Contrast
-Introduction
+# GSoC '22 Report | Anuja Raj Verma | Wagtail | High Contrast
+# Introduction
 The Google Summer of Code program has been a great and fun learning experience for me over the past months. The project aimed at improving the accessibility of wagtail in the lens of high contrast themes in windows. The project had two major parts
 Resolving existing high contrast issues mainly in the Wagtail admin:
 Most of the contrast and accessibility issues were present in Wagtail’s styleguide. The issues had to be dealt in all themes of the windows contrast themes to improve accessibility of the Admin for all its users
@@ -9,26 +9,27 @@ Accessibility tests and reporting new issues :
 We can divide the tests into two categories- Automated and manual. The manual accessibility tests were mostly performed using Chrome tools and Windows 11 contrast themes.
 The Automated testing was performed using pa11y. 
 
-What is Wagtail
+# What is Wagtail
 Wagtail is a free and open source content management system (CMS) written in Python. It is popular amongst websites using the Django framework. 
 What is Windows High Contrast and why is it needed
 Windows High Contrast mode ensures a customized user interface that renders data according to the requirement of the user. Though to some users working without WHCM is a better option, many face visual disabilities and as a result, find the UI difficult to navigate. Therefore to allow all users a satisfactory admin interface we must ensure WHCM is implemented throughout the admin.
 
-Work Summary
+# Work Summary
  
-Fixed prior issues mentioned in the  Audits in the UI components, Admin interface, and Wagtail Style Guide which are described below:
+## Fixed prior issues mentioned in the  Audits in the UI components, Admin interface, and Wagtail Style Guide which are described below:
 Issue #1: High-contrast mode: buttons with .disabled class look active in high-contrast mode - To resolve this issue I added a PR that added a @media query in forced-colors for the disabled buttons with certain CSS styles to enable better disabled look
 Issue #2: Progress Bar not visible in Windows High Contrast Mode - To resolve this issue system colors were added to the components 
  
-Fixing issues discovered during the GSOC coding period are mentioned below:
+## Fixing issues discovered during the GSOC coding period are mentioned below:
 Issue #3: Check Mark is not visible inside the checkbox in the users section of the Admin in Windows High Contrast Mode - To resolve the issue I used media query and forced color : active along with system colors
 Issue #4: The icons in the Styleguide, in contrast themes were overridden by forced colors which removed the icon’s original meaning - To achieve the desired result I commented the media query for forced-colors over the icons. The query was added when chrome was having a bug due to which an override on icons using fill (a css property) was required. Since the bug is removed we would want to remove the override too
 Issue #5: The boxes(help,critical message and warning boxes) inside the Styleguide were styled oddly giving visual traffic to eyes in Windows High Contrast Mode  - To resolve this issue I added three types of borders to the three kinds of boxes and removed any color from texts or borders. This provides a distinct look as well as more visual clarity to the viewer in Windows High Contrast Mode.Along with border styling the issue pertaining to text inside the first box (help box) in lighter modes of high contrast earlier was not visible
 Issue #6: In Windows High Contrast Mode / forced-colors mode, Styleguide’s  dialog component lacks a backdrop, thus making it hard to understand where the component is - To resolve this borders were added to the modal box using forced colors and system colors
 Issue #7: In Windows High Contrast Mode/ forced colors mode,tooltip-style "More" dropdowns are missing a border or outline, so it’s hard to tell where the dropdown is - To resolve this I added a transparent border to the component making it visible only in the contrast themes
-Fixed Linting issues - Linting the changes while making changes on the frontend is important to reflect changes on the browser. 
+## Fixed Linting issues - Linting the changes while making changes on the frontend is important to reflect changes on the browser. 
 Issue #8: While running npm run lint:format in windows, a certain error popped up due to some incorrect format of how it was written as a script inside the packages. This was corrected by changing the format of how it was written particularly for Windows users.
-Accessibility Testing - The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project we conducted manual testing using Windows Contrast themes and Chrome tools
+## Accessibility Testing 
+The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project we conducted manual testing using Windows Contrast themes and Chrome tools
 Working with Pa11y - For trying automated testing we preferred pa11y. Since most automated tests were already performed by my mentor Thibaud in his github repository, (https://github.com/thibaudcolas/wagtail-tooling/blob/main/accessibility/pa11y-test.js)I mostly worked with wagtail’s Bakery Demo website for testing pa11y. I conducted automated testing on its few pages and found bugs as shown in the below screenshots:
 
 
@@ -57,12 +58,12 @@ Contrast Themes and Testing
       
 
  
-Future Aspects
+## Future Aspects
  
 I intend to improve this project and also it can act as the starting point for anyone who would be interested in contributing to the project further. A few of the improvements and new features could be the following:
 Performing Automated pa11y testing over the Wagtail’s Bakery Demo Admin interface
 Extending the contrast improvements to Wagtail’s Bakery Demo site
 
-Remarks
+## Remarks
  
 I had a fun and learning experience while working under Wagtail. I was afraid of asking questions initially which I overcame to some extent in the whole journey. I loved the Wagtail community and I got guidance and help whenever I got stuck. I would like to thank especially my mentors Jane, Thibaud and Scott for helping and guiding me throughout the process. I also would like to thank Lb for helping me get comfortable with the open source community during the application period.
