@@ -8,13 +8,13 @@ The project had two major parts</br>
 Most of the contrast and accessibility issues were present in Wagtail’s styleguide. The issues had to be dealt in all themes of the windows contrast themes to improve accessibility of the Admin for all its users</br>
  
 * Accessibility tests and reporting new issues :</br>
-We can divide the tests into two categories- Automated and manual. The manual accessibility tests were mostly performed using Chrome tools and Windows 11 contrast themes.</br>
+We can divide the tests into two categories- Automated and manual. The manual accessibility tests were mostly performed using Chrome developer tools and Windows 11 contrast themes.</br>
 The Automated testing was performed using pa11y. 
 
 #### What is Wagtail
 Wagtail is a free and open source content management system (CMS) written in Python. It is popular amongst websites using the Django framework.</br>
 #### What is Windows High Contrast and why is it needed</br>
-Windows High Contrast mode ensures a customized user interface that renders data according to the requirement of the user. Though to some users working without WHCM is a better option, many face visual disabilities and as a result, find the UI difficult to navigate. Therefore to allow all users a satisfactory admin interface we must ensure WHCM is implemented throughout the admin.
+Windows High Contrast mode ensures a customized user interface that renders data according to the requirement of the user. Though to some users working without WHCM is a better option, many face visual disabilities and as a result, find the UI difficult to navigate. Therefore to allow all users a satisfactory admin interface we must ensure WHCM is supported throughout the admin.
 
 ## Work Summary
  
@@ -38,7 +38,7 @@ In Windows High Contrast Mode/ forced colors mode,tooltip-style "More" dropdowns
 ### Fixed Linting issues - Linting the changes while making changes on the frontend is important to reflect changes on the browser. 
 Issue #8: While running npm run lint:format in windows, a certain error popped up due to some incorrect format of how it was written as a script inside the packages. This was corrected by changing the format of how it was written particularly for Windows users.
 ### Accessibility Testing 
-The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project we conducted manual testing using Windows Contrast themes and Chrome tools</br>
+The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project we conducted manual testing using Windows Contrast themes and Chromedeveloper tools</br>
 Working with Pa11y - For trying automated testing we preferred pa11y. Since most automated tests were already performed by my mentor Thibaud in his github repository, (https://github.com/thibaudcolas/wagtail-tooling/blob/main/accessibility/pa11y-test.js)I mostly worked with wagtail’s Bakery Demo website for testing pa11y. I conducted automated testing on its few pages and found bugs as shown in the below screenshots:</br>
 ![Screenshot-1](https://user-images.githubusercontent.com/52713215/188315836-d1d189b2-c6f7-4d2a-89ee-3506c62aab10.png)
 
