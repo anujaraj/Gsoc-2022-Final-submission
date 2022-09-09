@@ -115,10 +115,23 @@ In Windows High Contrast Mode/Forced Colors Mode, Styleguide’s dialogue compon
 ##### Issue #7: 
 In Windows High Contrast Mode/Forced Colors Mode,tooltip-style "More" dropdowns are missing a border or outline, so it’s hard to tell where the dropdown is - To resolve this I added a transparent border to the component, making it visible only in the contrast themes. 
 ### Fixed Linting issues- Linting the changes while making changes on the frontend is important to reflect changes in the browser. 
-Issue #8: While running npm run lint:format in Windows, a certain error popped up due to some incorrect format of how it was written as a script inside the packages. This was corrected by changing the format of how it was written, particularly for Windows users. 
+##### Issue #8: 
+While running npm run lint:format in Windows, a certain error popped up due to some incorrect format of how it was written as a script inside the packages. This was corrected by changing the format of how it was written, particularly for Windows users. 
+### Other changes that were not merged
+##### Issue #9:
+In Windows High Contrast Mode,the field inside the login/password reset form styles of the admin, are invisible - To correct this my suggested changes was to add an invisible border around the field boxes or add a media query with system colors for borders. Since this issue was already resolved by correcting the design of the form, my PR wasnt merged.
+##### Issue #10:
+In Windows High Contrast Mode, in the tooltip-style "More" dropdowns, the tooltip was rendered as a square - To resolve this issue, my suggested tried were: 
+* Use [clip-path : polygon](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path) - It would provide the desired shape shape of an arrow.
+* Use `forced-color-adjust: none` - Since we didnt want to loose the true form of Windows High Contrast using this was erradicated.
+##### Issue #11:
+In the admin's info side panel, a few buttons displayed, are in "link" style - To work this out, I had to look into the following aspects:
+* The component used a CSS utility framework [Tailwind](https://tailwindcss.com/)
+* Understanding its basic syntax helped in resolving the issue. I added a CSS over the media query using tailwind classes to produce the required outcome
+* Since the issue was not just related to this component and was a part of a whole button and anchor class in the website, we decided to freeze this PR and instead added a issue as follows (https://github.com/wagtail/wagtail/issues/9078)
 ### Accessibility Testing 
 The accessibility testing was done in two parts, one being manual and the other being automated using pa11y. For most parts of the project, we conducted manual testing using Windows Contrast themes and Chromedeveloper tools</br>
-Working with Pa11y-For trying automated testing, we preferred Pa11y. Since most automated tests were already performed by my mentor Thibaud in his github repository, (https://github.com/thibaudcolas/wagtail-tooling/blob/main/accessibility/pa11y-test.js)I mostly worked with Wagtail’s Bakery Demo website for testing pa11y. I conducted automated testing on its few pages and found bugs as shown in the below screenshots:</br>
+Working with Pa11y-For trying automated testing, we preferred Pa11y. Since most automated tests were already performed by my mentor Thibaud in his github repository, (https://github.com/thibaudcolas/wagtail-tooling/blob/main/accessibility/pa11y-test.js) I mostly worked with Wagtail’s Bakery Demo website for testing pa11y. I conducted automated testing on its few pages and found bugs as shown in the below screenshots:</br>
 ![Screenshot-1](https://user-images.githubusercontent.com/52713215/188315836-d1d189b2-c6f7-4d2a-89ee-3506c62aab10.png)
 
 ![Screenshot (193)](https://user-images.githubusercontent.com/52713215/188315844-89b75032-1d75-45a8-962e-1b55cb7d76af.png)
@@ -143,17 +156,17 @@ https://github.com/wagtail/bakerydemo/issues/356<br></br>
 ## Important Links
 ***
 * [Documentation](https://docs.wagtail.org/en/stable/) </br>
-* [Blog Post About GSoC journey] () </br>
+* [Blog Post About GSoC journey] (https://wagtail.org/gsoc-2022-contrast-themes/) </br>
 * [Project Github Board](https://github.com/orgs/wagtail/projects/5/)</br>
 
       
 ## Future Aspects
- 
+
 I intend to improve this project and also use it as a starting point for anyone who would be interested in contributing to it further. A few of the improvements and new features could be the following:</br>
 Performing Automated Pa11y testing over the Wagtail’s Bakery Demo Admin interface</br>
-Extending the contrast improvements to Wagtail’s Bakery Demo site</br>
+Fixes following a Pa11y audit of the bakery site</br>
 
 ## Remarks
- 
+
 I had a fun and learning experience while working under Wagtail. I was afraid of asking questions initially, which I overcame to some extent on the whole journey. I loved the Wagtail community, and I got guidance and help whenever I got stuck. I would like to especially thank my mentors, Jane, Thibaud, and Scott, for helping and guiding me throughout the process. I also would like to thank Lb for helping me get comfortable with the open source community during the application period.
 
