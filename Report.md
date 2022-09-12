@@ -77,7 +77,7 @@ https://github.com/wagtail/bakerydemo/issues/356<br></br>
 ## Important Links
 ***
 * [Documentation](https://docs.wagtail.org/en/stable/) </br>
-* [Blog Post About GSoC journey](https://wagtail.org/gsoc-2022-contrast-themes/) </br>
+* [Blog Post About GSoC journey]( https://wagtail.org/blog/google-summer-of-code-high-contrast-themes/) </br>
 * [Project Github Board](https://github.com/orgs/wagtail/projects/5/)</br>
 
       
